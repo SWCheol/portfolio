@@ -1,3 +1,4 @@
-let windowWidth = window.innerWidth;
-let windowHeight = window.innerHeight;
-let wrapper = document.querySelector(".wrapper");
+let windowHeight = document.querySelector("body").scrollHeight;
+let navHeight = document.querySelector("nav").scrollWidth;
+
+window.addEventListener("scroll", () => {});

@@ -1,10 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 
-  scroll-behavior: smooth;
-
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Nanum Brush Script", "Noto Sans KR", cursive;
+  font-size: 4rem;
 }
 
 body::-webkit-scrollbar {
@@ -27,8 +30,48 @@ body::-webkit-scrollbar {
   letter-spacing: 5px;
 }
 
-.wrapper {
-  padding-top: 200px;
+#header nav {
+  position: absolute;
+  top: 150px;
+  right: 50px;
+  width: 300px;
+  height: 0px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header nav::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: url(img/Star2.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: -17.5px;
+  /* left: 267.5px; */
+  z-index: -1;
+  animation: star 3s linear infinite;
+  filter: blur(5px);
+}
+
+@keyframes star {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#header nav a {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  background: #fff;
+  filter: blur(1px);
 }
 
 .box {
@@ -39,12 +82,28 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 200px;
 }
 
 #footer {
   width: 100vw;
   height: 200px;
-  background: linear-gradient(#071f4b,#000033);
+  background: linear-gradient(#071f4b 0%, #000 50%);
   color: #fff;
   text-align: center;
+  position: relative;
+}
+
+#footer a {
+  transform: translateY(50px);
+  line-height: 200px;
+  text-decoration: none;
+  color: #fff;
+}
+
+#footer img {
+  position: absolute;
+  width: 300px;
+  top: -50px;
+  left: 20px;
 }
