@@ -1,5 +1,7 @@
 html {
   scroll-behavior: smooth;
+
+  overflow-y: hidden;
 }
 
 body {
@@ -17,7 +19,7 @@ body::-webkit-scrollbar {
 #header {
   width: 100vw;
   height: 200px;
-  background: linear-gradient(#000033, #071f4b);
+  background: linear-gradient(#000, #071f4b);
   color: #fff;
   text-align: center;
   position: fixed;
@@ -33,8 +35,8 @@ body::-webkit-scrollbar {
 #header nav {
   position: absolute;
   top: 150px;
-  right: 50px;
-  width: 300px;
+  right: calc(5vw);
+  width: calc(100vw / 3);
   height: 0px;
   background: #fff;
   display: flex;
@@ -42,18 +44,17 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 
-#header nav::after {
-  content: "";
-  width: 50px;
-  height: 50px;
+#header nav .star {
+  width: 75px;
+  height: 75px;
   background: url(img/Star2.png) no-repeat;
   background-size: contain;
   position: absolute;
-  left: -17.5px;
-  /* left: 267.5px; */
+  left: -25px;
   z-index: -1;
   animation: star 3s linear infinite;
   filter: blur(5px);
+  transition: 1.5s all;
 }
 
 @keyframes star {
@@ -67,11 +68,12 @@ body::-webkit-scrollbar {
 
 #header nav a {
   display: block;
-  width: 15px;
-  height: 15px;
-  border-radius: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 30px;
   background: #fff;
   filter: blur(1px);
+  transition: 0.5s all;
 }
 
 .box {
@@ -85,25 +87,61 @@ body::-webkit-scrollbar {
   padding-top: 200px;
 }
 
+.contents {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px 1px #000;
+}
+
 #footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 100vw;
   height: 200px;
+  padding-top: 200px;
   background: linear-gradient(#071f4b 0%, #000 50%);
   color: #fff;
-  text-align: center;
   position: relative;
 }
 
 #footer a {
-  transform: translateY(50px);
-  line-height: 200px;
   text-decoration: none;
   color: #fff;
+  font-size: 2rem;
 }
 
 #footer img {
-  position: absolute;
-  width: 300px;
-  top: -50px;
-  left: 20px;
+  align-self: flex-start;
+}
+
+#footer .tree {
+  max-width: 15vw;
+  transform: translateY(-14vw);
+}
+
+#footer .man {
+  max-width: 8vw;
+  transform: translateY(-6vw);
+}
+
+@media screen and (max-width: 1280px) {
+  #header nav a {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+  }
+  #header nav .star {
+    width: 50px;
+    height: 50px;
+    left: -17.5px;
+  }
+
+  #footer .man {
+    max-width: 8vw;
+    transform: translateY(-8vw);
+  }
 }
