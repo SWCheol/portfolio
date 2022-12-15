@@ -34,6 +34,7 @@
     <!-- css -->
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="star.css" />
   </head>
 
   <body>
@@ -44,28 +45,39 @@
         <a href="#box2" class="btn"></a>
         <a href="#box3" class="btn"></a>
         <a href="#box4" class="btn"></a>
-        <div class="star"></div>
+        <div class="navStar"></div>
       </nav>
+      <div class="star"></div>
     </header>
-    <div id="wrapper" class="wrapper">
-      <article id="box1" class="box"></article>
-      <article id="box2" class="box">
-        <div class="contents"><div>dsadsa</div></div>
-      </article>
-      <article id="box3" class="box"><div class="contents"></div></article>
-      <article id="box4" class="box"><div class="contents"></div></article>
-    </div>
+    <main id="wrapper">
+      <div id="box1" class="box night">
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+      </div>
+      <div id="box2" class="box"></div>
+      <div id="box3" class="box"></div>
+      <div id="box4" class="box"></div>
+    </main>
     <footer id="footer">
       <img class="tree" src="img/forest.png" />
-      <a href="#wrapper">▲ TOP</a>
+      <a href="#box1">▲ TOP</a>
       <img class="man" src="img/man.png" />
     </footer>
 
     <!-- js -->
-    <!-- <script src="node_modules/scroll-js/dist/scroll.js"></script>
-    <script src="swiper.js"></script>
-    <script src="scroll.js"></script> -->
     <script src="index.js"></script>
-    <script src="star.js"></script>
   </body>
 </html>

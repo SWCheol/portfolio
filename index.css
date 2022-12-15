@@ -1,40 +1,28 @@
-html {
-  scroll-behavior: smooth;
-
-  overflow-y: hidden;
-}
-
 body {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-
   font-family: "Nanum Brush Script", "Noto Sans KR", cursive;
   font-size: 4rem;
 }
 
-body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
-}
-
 #header {
   width: 100vw;
-  height: 200px;
-  background: linear-gradient(#000, #071f4b);
+  height: 150px;
+  background: linear-gradient(#000, #071f4b 100%);
   color: #fff;
   text-align: center;
-  position: fixed;
+  position: absolute;
+  top: 0;
 }
 
 #header .h1 {
   font-size: 3rem;
   font-weight: bolder;
-  line-height: 200px;
   letter-spacing: 5px;
+  line-height: 150px;
 }
 
 #header nav {
   position: absolute;
-  top: 150px;
+  top: 100px;
   right: calc(5vw);
   width: calc(100vw / 3);
   height: 0px;
@@ -44,16 +32,15 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 
-#header nav .star {
-  width: 75px;
-  height: 75px;
+#header nav .navStar {
+  width: 50px;
+  height: 50px;
   background: url(img/Star2.png) no-repeat;
   background-size: contain;
   position: absolute;
   left: -25px;
-  z-index: -1;
   animation: star 3s linear infinite;
-  filter: blur(5px);
+  filter: blur(3px);
   transition: 1.5s all;
 }
 
@@ -76,24 +63,48 @@ body::-webkit-scrollbar {
   transition: 0.5s all;
 }
 
-.box {
-  background-color: #071f4b;
-  width: 100vw;
-  height: calc(100vh - 200px);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 200px;
+@keyframes shine {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
 }
 
-.contents {
+#wrapper {
+  background-color: #071f4b;
+  width: 100vw;
+  height: calc(100vh - 300px);
+  color: #fff;
+  /* margin-top: 150px; */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+#wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+#wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.box {
   width: 90%;
-  height: 90%;
-  margin: auto;
+  height: 100%;
+  margin: 5% auto 0;
   background-color: #fff;
   border-radius: 20px;
-  box-shadow: 1px 1px 1px 1px #000;
+  position: relative;
+}
+
+.box:first-child {
+  background-color: #071f4b;
 }
 
 #footer {
@@ -101,11 +112,11 @@ body::-webkit-scrollbar {
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  height: 200px;
-  padding-top: 200px;
-  background: linear-gradient(#071f4b 0%, #000 50%);
+  height: 150px;
+  background: linear-gradient(#071f4b 0%, #000 35%);
   color: #fff;
-  position: relative;
+  position: absolute;
+  bottom: 0;
 }
 
 #footer a {
@@ -119,13 +130,15 @@ body::-webkit-scrollbar {
 }
 
 #footer .tree {
-  max-width: 15vw;
-  transform: translateY(-14vw);
+  max-width: 10vw;
+  transform: translateY(-4vw);
+  transition: 1s all;
 }
 
 #footer .man {
-  max-width: 8vw;
-  transform: translateY(-6vw);
+  max-width: 6vw;
+  transform: translateY(-1vw);
+  transition: 1s all;
 }
 
 @media screen and (max-width: 1280px) {
@@ -140,8 +153,28 @@ body::-webkit-scrollbar {
     left: -17.5px;
   }
 
+  #footer .tree {
+    max-width: 15vw;
+    transform: translateY(-6vw);
+  }
+
   #footer .man {
     max-width: 8vw;
-    transform: translateY(-8vw);
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 525px) {
+  #footer .tree {
+    transform: translateY(0vw);
+  }
+
+  #footer .man {
+    transform: translateY(7vw);
+  }
+
+  #header nav .navStar {
+    width: 30px;
+    height: 30px;
   }
 }
