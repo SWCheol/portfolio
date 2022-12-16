@@ -41,22 +41,33 @@
     <header id="header">
       <h1 class="h1">SWChoel</h1>
       <nav>
-        <a href="#box1" class="btn"></a>
-        <a href="#box2" class="btn"></a>
-        <a href="#box3" class="btn"></a>
-        <a href="#box4" class="btn"></a>
-        <div class="navStar"></div>
+        <a href="#box1" class="btn"><div>intro</div></a>
+        <a href="#box2" class="btn"><div>profile</div></a>
+        <a href="#box3" class="btn"><div>skill</div></a>
+        <a href="#box4" class="btn"><div>work</div></a>
+        <!-- <div class="navStar"></div> -->
       </nav>
       <div class="star"></div>
     </header>
     <main id="wrapper">
-      <div id="box1" class="box night">
+      <div id="box1"></div>
+      <div class="night">
         <div class="shooting_star"></div>
         <div class="shooting_star"></div>
         <div class="shooting_star"></div>
+        <div class="shooting_star back"></div>
         <div class="shooting_star"></div>
+        <div class="shooting_star back"></div>
         <div class="shooting_star"></div>
+        <div class="shooting_star back"></div>
         <div class="shooting_star"></div>
+        <div class="shooting_star back"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star back"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star back"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star back"></div>
         <div class="shooting_star"></div>
         <div class="shooting_star"></div>
         <div class="shooting_star"></div>
@@ -67,10 +78,80 @@
         <div class="shooting_star"></div>
         <div class="shooting_star"></div>
       </div>
-      <div id="box2" class="box"></div>
-      <div id="box3" class="box"></div>
-      <div id="box4" class="box"></div>
+      <div class="text">프론트엔드 <br />개발자 <br />포트폴리오</div>
+      <div id="box2" class="box">
+        <div class="profile">
+          <div class="name">개발자 손웅철입니다.</div>
+          <div class="url">
+            깃허브<a target="_blank" href="https://github.com/SWCheol"><img src="img/github.png" alt="깃허브" /></a>
+          </div>
+        </div>
+        <div class="question">
+          <strong>어떤 성격의 사람인지</strong>
+          <div class="answer">대답</div>
+        </div>
+        <div class="question">
+          <strong>어떤 개발자가 되고 싶은지</strong>
+          <div class="answer">대답</div>
+        </div>
+      </div>
+      <div id="box3" class="box">
+        <div class="skill">
+          <div class="item">
+            <img src="img/html.png" alt="html" />
+            <div>설명</div>
+          </div>
+          <div class="item">
+            <img src="img/css.png" alt="css" />
+            <div>설명</div>
+          </div>
+          <div class="item">
+            <img src="img/scss.png" alt="scss" />
+            <div>설명</div>
+          </div>
+          <div class="item">
+            <img src="img/tailwindcss.jpg" alt="tailwindcss" />
+            <div>설명</div>
+          </div>
+          <div class="item">
+            <img src="img/js.png" alt="javascript" />
+            <div>설명</div>
+          </div>
+          <div class="item">
+            <img src="img/react.jpg" alt="react" />
+            <div>설명</div>
+          </div>
+          <div class="item">
+            <img src="img/nodejs.png" alt="nodeJS" />
+            <div>설명</div>
+          </div>
+          <div class="item">
+            <img src="img/git.png" alt="git" />
+            <div>설명</div>
+          </div>
+          <div class="item">
+            <img src="img/pwa.png" alt="pwa" />
+            <div>설명</div>
+          </div>
+          <div class="item">
+            <img src="img/figma.jpg" alt="figma" />
+            <div>설명</div>
+          </div>
+        </div>
+      </div>
+      <div id="box4" class="box">
+        <div id="beforeBtn" class="slideBtn">◀</div>
+        <div class="workWrapper">
+          <div class="workBelt">
+            <article class="work"></article>
+            <article class="work"></article>
+            <article class="work"></article>
+          </div>
+        </div>
+        <div id="afterBtn" class="slideBtn">▶</div>
+      </div>
     </main>
+
     <footer id="footer">
       <img class="tree" src="img/forest.png" />
       <a href="#box1">▲ TOP</a>
@@ -79,5 +160,6 @@
 
     <!-- js -->
     <script src="index.js"></script>
+    <script src="slide.js"></script>
   </body>
 </html>

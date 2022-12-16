@@ -1,23 +1,80 @@
-// 네비 별 움직이기
-let starMove = function (boxPosition) {
-  // click 이벤트 감지
-  // wheel 이벤트 감지
-  let navWidth = document.querySelector("nav").clientWidth;
-  let navStar = document.querySelector(".star");
-  let wrapperHeight = document.getElementById("wrapper").clientHeight;
-};
-
-let page = document.querySelectorAll(".box");
-
-// 화면 움직이기
-let pageMove = function (page) {};
-
 // 스크롤 휠 터치 마다 화면 움직이기
-// 네비 누를 때마다 네비 별 움직이기
-// = 화면이 일정 scroll에 도달할 때마다 네비 별 움직이기?
 window.addEventListener("wheel", (e) => {
-  pageMove(e);
+  const wrapper = document.getElementById("wrapper");
+
+  const box1 = document.getElementById("box1");
+  const box1Top = box1.offsetTop;
+  const box1Bounding = Math.abs(box1.getBoundingClientRect().top);
+
+  const box2 = document.getElementById("box2");
+  const box2Top = box2.offsetTop;
+  const box2Bounding = Math.abs(box2.getBoundingClientRect().top);
+
+  const box3 = document.getElementById("box3");
+  const box3Top = box3.offsetTop;
+  const box3Bounding = Math.abs(box3.getBoundingClientRect().top);
+
+  const box4 = document.getElementById("box4");
+  const box4Top = box4.offsetTop;
+  const box4Bounding = Math.abs(box4.getBoundingClientRect().top);
+
+  let currentScroll = Math.min(box1Bounding, box2Bounding, box3Bounding, box4Bounding);
+
+  if (currentScroll === box1Bounding) {
+    if (e.deltaY < 0) {
+      return;
+    } else if (e.deltaY > 0) {
+      wrapper.scrollTo(0, box2Top);
+    }
+  } else if (currentScroll === box2Bounding) {
+    if (e.deltaY < 0) {
+      wrapper.scrollTo(0, box1Top);
+    } else if (e.deltaY > 0) {
+      wrapper.scrollTo(0, box3Top);
+    }
+  } else if (currentScroll === box3Bounding) {
+    if (e.deltaY < 0) {
+      wrapper.scrollTo(0, box2Top);
+    } else if (e.deltaY > 0) {
+      wrapper.scrollTo(0, box4Top);
+    }
+  } else if (currentScroll === box4Bounding) {
+    if (e.deltaY < 0) {
+      wrapper.scrollTo(0, box3Top);
+    } else if (e.deltaY > 0) {
+      return;
+    }
+  }
 });
 
-// 브라우저 크기 변경할 때마다 네비 별 움직이기
-window.addEventListener("resize", () => {});
+window.addEventListener("resize", () => {
+  const wrapper = document.getElementById("wrapper");
+
+  const box1 = document.getElementById("box1");
+  const box1Top = box1.offsetTop;
+  const box1Bounding = Math.abs(box1.getBoundingClientRect().top);
+
+  const box2 = document.getElementById("box2");
+  const box2Top = box2.offsetTop;
+  const box2Bounding = Math.abs(box2.getBoundingClientRect().top);
+
+  const box3 = document.getElementById("box3");
+  const box3Top = box3.offsetTop;
+  const box3Bounding = Math.abs(box3.getBoundingClientRect().top);
+
+  const box4 = document.getElementById("box4");
+  const box4Top = box4.offsetTop;
+  const box4Bounding = Math.abs(box4.getBoundingClientRect().top);
+
+  let currentScroll = Math.min(box1Bounding, box2Bounding, box3Bounding, box4Bounding);
+
+  if (currentScroll === box1Bounding) {
+    wrapper.scrollTo(0, box1Top);
+  } else if (currentScroll === box2Bounding) {
+    wrapper.scrollTo(0, box2Top);
+  } else if (currentScroll === box3Bounding) {
+    wrapper.scrollTo(0, box3Top);
+  } else if (currentScroll === box4Bounding) {
+    wrapper.scrollTo(0, box4Top);
+  }
+});
