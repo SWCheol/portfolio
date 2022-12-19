@@ -126,3 +126,13 @@ $shooting-time: 3000ms;
 .back {
   opacity: 0.1;
 }
+
+.middle {
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 768px) {
+  .night {
+    transform: rotateZ(135deg) translate(100px, 700px);
+  }
+}

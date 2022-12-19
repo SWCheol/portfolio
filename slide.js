@@ -16,7 +16,6 @@ slideBtn.forEach((ele) => {
     let left = workBelt.style.left;
 
     if (e.target === before && parseInt(left) !== 0) {
-      //   left = parseInt(left) - 100 + "%"; 이건 왜 안되냐???
       workBelt.style.left = parseInt(left) + 100 + "%";
     } else if (e.target === after && Math.abs(parseInt(left)) / ((work.length - 1) * 100) !== 1) {
       workBelt.style.left = parseInt(left) - 100 + "%";
