@@ -162,13 +162,14 @@ body {
 
 #box2 .profile {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   flex-basis: 10%;
+  word-break: keep-all;
 }
 
 #box2 .profile .url a img {
-  width: 5vw;
+  width: 8vw;
   vertical-align: middle;
 }
 
@@ -179,7 +180,7 @@ body {
 #box2 .question strong {
   display: block;
   font-size: 3rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 #box3 .skill {
@@ -213,6 +214,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow-y: auto;
 }
 
 #box4 .slideBtn {
@@ -247,26 +249,41 @@ body {
   display: flex;
 }
 
-#box4 .workWrapper .workBelt .work .contents {
-  flex-basis: 50%;
-  background: grey;
-}
 #box4 .workWrapper .workBelt .work .screenshot {
   flex-basis: 50%;
-  background: black;
+  margin-right: 20px;
 }
 
-.work:nth-child(1) {
-  background: blue;
+#box4 .workWrapper .workBelt .work:nth-child(n) .screenshot {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
 }
-.work:nth-child(2) {
-  background: red;
+
+#box4 .workWrapper .workBelt .work:nth-child(1) .screenshot {
+  background-image: url(img/project1_m.PNG);
 }
-.work:nth-child(3) {
-  background: green;
+
+#box4 .workWrapper .workBelt .work:nth-child(2) .screenshot {
+  background-image: url(img/project2_m.PNG);
 }
-.work:nth-child(4) {
-  background: yellow;
+
+#box4 .workWrapper .workBelt .work:nth-child(3) .screenshot {
+  background-image: url(img/project3_m.PNG);
+}
+
+#box4 .workWrapper .workBelt .work .contents {
+  flex-basis: 50%;
+}
+
+#box4 .workWrapper .workBelt .work .contents div {
+  margin-bottom: 10px;
+}
+
+#box4 .workWrapper .workBelt .work .contents div a {
+  color: blue;
+  font-size: 1.6rem;
+  text-decoration: none;
 }
 
 #footer {
@@ -310,8 +327,8 @@ body {
     border-radius: 15px;
   }
 
-  #box4 .workWrapper .workBelt .work {
-    flex-direction: column;
+  #box4 .workWrapper .workBelt .work .screenshot {
+    margin-bottom: 20px;
   }
 
   #footer .tree {
@@ -340,8 +357,22 @@ body {
     display: block;
   }
 
+  #box2 .profile {
+    flex-direction: column;
+    font-size: 1.5rem;
+  }
+
+  #box2 .profile .name {
+    margin-bottom: 10px;
+  }
+
   #box2 .question strong {
     font-size: 2rem;
+    font-weight: bold;
+  }
+
+  #box2 .question .answer {
+    font-size: 1.6rem;
   }
 
   #box3 .skill .item {
@@ -354,14 +385,19 @@ body {
     width: auto;
   }
 
+  #box4 .workWrapper .workBelt .work {
+    flex-direction: column;
+    font-size: 1.5rem;
+  }
+
   #footer .tree {
     max-width: 15vw;
-    transform: translateY(-5vw);
+    transform: translateY(0vw);
   }
 
   #footer .man {
     max-width: 10vw;
-    transform: translateY(0vw);
+    transform: translateY(6vw);
   }
 }
 
