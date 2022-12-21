@@ -10,35 +10,37 @@ html {
 }
 
 body {
-  font-family: "Nanum Brush Script", "Noto Sans KR", cursive;
+  font-family: "Noto Sans KR", cursive;
   font-size: 4rem;
 }
 
+.brush {
+  font-family: "Nanum Brush Script", serif;
+}
+
 #header {
+  display: flex;
+  align-items: center;
   width: 100vw;
   height: 150px;
   background: linear-gradient(#000, #071f4b 100%);
   color: #fff;
-  text-align: center;
   position: absolute;
   top: 0;
   overflow: hidden;
 }
 
 #header .h1 {
-  font-size: 3rem;
+  position: absolute;
+  left: 5%;
   font-weight: bolder;
   letter-spacing: 5px;
-  line-height: 150px;
 }
 
 #header nav {
   position: absolute;
-  top: 100px;
-  right: calc(5vw);
+  right: 5%;
   width: calc(100vw / 3);
-  height: 0px;
-  background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -108,19 +110,9 @@ body {
   width: 100vw;
   height: calc(100vh - 300px);
   color: #fff;
-  /* margin-top: 150px; */
   overflow: hidden;
   scroll-behavior: smooth;
   position: relative;
-}
-
-#wrapper {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-#wrapper::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
 }
 
 .box {
@@ -142,7 +134,7 @@ body {
 
 #wrapper > .text {
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
   line-height: 1.1;
@@ -175,12 +167,17 @@ body {
 
 #box2 .question {
   flex-basis: 30%;
+  margin-bottom: 15px;
 }
 
 #box2 .question strong {
   display: block;
   font-size: 3rem;
   margin-bottom: 15px;
+}
+
+#box2 .question .answer {
+  line-height: 1.3;
 }
 
 #box3 .skill {
@@ -200,7 +197,7 @@ body {
 }
 
 #box3 .skill div {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   word-break: keep-all;
 }
 
@@ -256,7 +253,7 @@ body {
 
 #box4 .workWrapper .workBelt .work:nth-child(n) .screenshot {
   background-size: contain;
-  background-position: 50%;
+  background-position: top center;
   background-repeat: no-repeat;
 }
 
@@ -274,10 +271,13 @@ body {
 
 #box4 .workWrapper .workBelt .work .contents {
   flex-basis: 50%;
+  margin-left: 20px;
 }
 
 #box4 .workWrapper .workBelt .work .contents div {
-  margin-bottom: 10px;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 #box4 .workWrapper .workBelt .work .contents div a {
@@ -288,7 +288,6 @@ body {
 
 #footer {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   width: 100vw;
   height: 150px;
@@ -302,6 +301,9 @@ body {
   text-decoration: none;
   color: #fff;
   font-size: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 #footer img {
@@ -309,12 +311,16 @@ body {
 }
 
 #footer .tree {
+  position: absolute;
+  left: 5%;
   max-width: 10vw;
   transform: translateY(-4vw);
   transition: 1s all;
 }
 
 #footer .man {
+  position: absolute;
+  right: 5%;
   max-width: 6vw;
   transform: translateY(-1vw);
   transition: 1s all;
@@ -327,8 +333,26 @@ body {
     border-radius: 15px;
   }
 
-  #box4 .workWrapper .workBelt .work .screenshot {
-    margin-bottom: 20px;
+  .box {
+    line-height: 1.2;
+  }
+
+  #box2 .profile {
+    font-size: 1.5rem;
+  }
+
+  #box2 .question strong {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  #box2 .question .answer {
+    font-size: 1.6rem;
+  }
+
+  #box4 .workWrapper .workBelt .work .contents div {
+    font-size: 1.6rem;
+    line-height: 1.1;
   }
 
   #footer .tree {
@@ -340,12 +364,35 @@ body {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  #box4 .workWrapper .workBelt .work {
+    flex-direction: column;
+  }
+
+  #box4 .workWrapper .workBelt .work .screenshot {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  #box4 .workWrapper .workBelt .work .contents div {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  #box4 .workWrapper .workBelt .work .contents div a {
+    font-size: 1.3rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  #header h1 {
-    transform: translateY(-25px);
+  #header .h1 {
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%);
   }
 
   #header nav {
+    top: 65%;
     width: calc(90%);
   }
 
@@ -359,20 +406,10 @@ body {
 
   #box2 .profile {
     flex-direction: column;
-    font-size: 1.5rem;
   }
 
   #box2 .profile .name {
-    margin-bottom: 10px;
-  }
-
-  #box2 .question strong {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  #box2 .question .answer {
-    font-size: 1.6rem;
+    display: none;
   }
 
   #box3 .skill .item {
@@ -381,13 +418,8 @@ body {
   }
 
   #box3 .skill .item div {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: auto;
-  }
-
-  #box4 .workWrapper .workBelt .work {
-    flex-direction: column;
-    font-size: 1.5rem;
   }
 
   #footer .tree {
@@ -402,6 +434,10 @@ body {
 }
 
 @media screen and (max-width: 300px) {
+  #box3 .skill .item div {
+    font-size: 1rem;
+  }
+
   #footer .tree {
     transform: translateY(5vw);
   }
