@@ -401,6 +401,19 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  #header {
+    height: 100px;
+  }
+
+  #wrapper {
+    height: calc(100vh - 150px);
+    transform: translateY(25px);
+  }
+
+  #footer {
+    height: 50px;
+  }
+
   #header .h1 {
     top: 15%;
     left: 50%;
@@ -449,30 +462,10 @@ body {
   }
 
   #box4 .workWrapper .workBelt .work .contents div {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   #box4 .workWrapper .workBelt .work .contents div a {
     font-size: 0.9rem;
-  }
-
-  #footer .tree {
-    max-width: 15vw;
-    transform: translateY(0vw);
-  }
-
-  #footer .man {
-    max-width: 10vw;
-    transform: translateY(6vw);
-  }
-}
-
-@media screen and (max-width: 300px) {
-  #footer .tree {
-    transform: translateY(5vw);
-  }
-
-  #footer .man {
-    transform: translateY(10vw);
   }
 }

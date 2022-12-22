@@ -1,8 +1,7 @@
-// 모바일 접속 시 주소표시줄 없애기
 window.addEventListener(
   "load",
   function () {
-    setTimeout(scrollTo, 0, 0, 1);
+    window.scrollTo(0, 1);
   },
   false
 );
