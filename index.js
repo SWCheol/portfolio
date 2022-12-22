@@ -47,7 +47,14 @@ window.addEventListener("wheel", (e) => {
   }
 });
 
-window.addEventListener("touchmove", (e) => {
+let start;
+let end;
+
+window.addEventListener("touchstart", (e) => {
+  start = e.changedTouches[0].clientY;
+});
+
+window.addEventListener("touchend", (e) => {
   const wrapper = document.getElementById("wrapper");
 
   const box1 = document.getElementById("box1");
@@ -68,28 +75,32 @@ window.addEventListener("touchmove", (e) => {
 
   let currentScroll = Math.min(box1Bounding, box2Bounding, box3Bounding, box4Bounding);
 
+  end = e.changedTouches[0].clientY;
+
+  let move = start - end;
+
   if (currentScroll === box1Bounding) {
-    if (e.changedTouches[0].clientY < 0) {
+    if (move < 0) {
       return;
-    } else if (e.changedTouches[0].clientY > 0) {
+    } else if (move > 0) {
       wrapper.scrollTo(0, box2Top);
     }
   } else if (currentScroll === box2Bounding) {
-    if (e.changedTouches[0].clientY < 0) {
+    if (move < 0) {
       wrapper.scrollTo(0, box1Top);
-    } else if (e.changedTouches[0].clientY > 0) {
+    } else if (move > 0) {
       wrapper.scrollTo(0, box3Top);
     }
   } else if (currentScroll === box3Bounding) {
-    if (e.changedTouches[0].clientY < 0) {
+    if (move < 0) {
       wrapper.scrollTo(0, box2Top);
-    } else if (e.changedTouches[0].clientY > 0) {
+    } else if (move > 0) {
       wrapper.scrollTo(0, box4Top);
     }
   } else if (currentScroll === box4Bounding) {
-    if (e.changedTouches[0].clientY < 0) {
+    if (move < 0) {
       wrapper.scrollTo(0, box3Top);
-    } else if (e.changedTouches[0].clientY > 0) {
+    } else if (move > 0) {
       return;
     }
   }

@@ -338,16 +338,20 @@ body {
   }
 
   #box2 .profile {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   #box2 .question strong {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: bold;
   }
 
   #box2 .question .answer {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+  }
+
+  #box3 .skill div {
+    font-size: 1.3rem;
   }
 
   #box4 .workWrapper .workBelt .work .contents div {
@@ -406,10 +410,19 @@ body {
 
   #box2 .profile {
     flex-direction: column;
+    font-size: 1rem;
   }
 
   #box2 .profile .name {
     display: none;
+  }
+
+  #box2 .question strong {
+    font-size: 1.1rem;
+  }
+
+  #box2 .question .answer {
+    font-size: 1rem;
   }
 
   #box3 .skill .item {
@@ -418,8 +431,16 @@ body {
   }
 
   #box3 .skill .item div {
-    font-size: 1.2rem;
+    font-size: 1rem;
     width: auto;
+  }
+
+  #box4 .workWrapper .workBelt .work .contents div {
+    font-size: 1rem;
+  }
+
+  #box4 .workWrapper .workBelt .work .contents div a {
+    font-size: 0.9rem;
   }
 
   #footer .tree {
@@ -434,10 +455,6 @@ body {
 }
 
 @media screen and (max-width: 300px) {
-  #box3 .skill .item div {
-    font-size: 1rem;
-  }
-
   #footer .tree {
     transform: translateY(5vw);
   }
