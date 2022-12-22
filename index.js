@@ -1,4 +1,13 @@
-// 스크롤 휠 터치 마다 화면 움직이기
+// 모바일 접속 시 주소표시줄 없애기
+window.addEventListener(
+  "load",
+  function () {
+    setTimeout(scrollTo, 0, 0, 1);
+  },
+  false
+);
+
+// 스크롤 휠 터치마다 화면 움직이기
 window.addEventListener("wheel", (e) => {
   const wrapper = document.getElementById("wrapper");
 
@@ -47,6 +56,7 @@ window.addEventListener("wheel", (e) => {
   }
 });
 
+// 모바일 터치마다 화면 움직이기
 let start;
 let end;
 
@@ -74,10 +84,15 @@ window.addEventListener("touchend", (e) => {
   const box4Bounding = Math.abs(box4.getBoundingClientRect().top);
 
   let currentScroll = Math.min(box1Bounding, box2Bounding, box3Bounding, box4Bounding);
+  let slideBtn = document.querySelectorAll(".slideBtn");
 
   end = e.changedTouches[0].clientY;
 
   let move = start - end;
+
+  if (e.target === slideBtn[0] || e.target === slideBtn[1]) {
+    return;
+  }
 
   if (currentScroll === box1Bounding) {
     if (move < 0) {
@@ -106,6 +121,7 @@ window.addEventListener("touchend", (e) => {
   }
 });
 
+// 브라우저 크기 조절마다 화면 위치 조정하기
 window.addEventListener("resize", () => {
   const wrapper = document.getElementById("wrapper");
 

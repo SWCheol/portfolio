@@ -269,6 +269,18 @@ body {
   background-image: url(img/project3_m.PNG);
 }
 
+#box4 .workWrapper .workBelt .work:nth-child(4) .screenshot {
+  background-image: url(img/project4_m.PNG);
+}
+
+#box4 .workWrapper .workBelt .work:nth-child(5) .screenshot {
+  background-image: url(img/project5_m.PNG);
+}
+
+#box4 .workWrapper .workBelt .work:nth-child(6) .screenshot {
+  background-image: url(img/project6_m.PNG);
+}
+
 #box4 .workWrapper .workBelt .work .contents {
   flex-basis: 50%;
   margin-left: 20px;
@@ -393,6 +405,7 @@ body {
     top: 15%;
     left: 50%;
     transform: translate(-50%);
+    font-size: 3rem;
   }
 
   #header nav {
