@@ -36,229 +36,231 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet" />
 
     <!-- css -->
-    <link rel="stylesheet" href="reset.css" />
+    <!-- <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="star.css" />
+    <link rel="stylesheet" href="star.css" /> -->
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <header id="header">
       <h1 class="h1 brush">SWChoel</h1>
       <nav class="brush">
-        <a href="#box1" class="btn"><div>intro</div></a>
-        <a href="#box2" class="btn"><div>profile</div></a>
-        <a href="#box3" class="btn"><div>skill</div></a>
-        <a href="#box4" class="btn"><div>work</div></a>
-        <!-- <div class="navStar"></div> -->
+        <div class="btn"><div>intro</div></div>
+        <div class="btn"><div>profile</div></div>
+        <div class="btn"><div>skill</div></div>
+        <div class="btn"><div>work</div></div>
       </nav>
     </header>
-    <main id="wrapper">
-      <div id="box1" class="box">
-        <div class="night">
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star middle"></div>
-          <div class="shooting_star back"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star back"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star back"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star back"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star back"></div>
-          <div class="shooting_star middle"></div>
-          <div class="shooting_star back"></div>
-          <div class="shooting_star middle"></div>
-          <div class="shooting_star back"></div>
-          <div class="shooting_star middle"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star middle"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star middle"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
+    <main id="main">
+      <div id="boxWrapper">
+        <div id="box1" class="box">
+          <div class="text brush">프론트엔드 <br />개발자 <br />포트폴리오</div>
         </div>
-      </div>
-      <div class="text brush">프론트엔드 <br />개발자 <br />포트폴리오</div>
-      <div id="box2" class="box">
-        <div class="profile">
-          <div class="name">프론트엔드 개발자를 꿈꾸는 손웅철입니다.</div>
-          <div class="url">
-            <div class="email">이메일 <span>time3837@gmail.com</span></div>
-            <div class="github">
-              깃허브 <a target="_blank" href="https://github.com/SWCheol"><img src="img/github.png" alt="깃허브" /></a>
+        <div id="box2" class="box">
+          <div class="profile">
+            <div class="name">프론트엔드 개발자를 꿈꾸는 손웅철입니다.</div>
+            <div class="url">
+              <div class="email">이메일 <span>time3837@gmail.com</span></div>
+              <div class="github">
+                깃허브
+                <a target="_blank" href="https://github.com/SWCheol"><img src="img/github.png" alt="깃허브" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="question">
+            <strong>차분하고 꾸준한 사람</strong>
+            <div class="answer">
+              많이 늦었다고 생각하지만 이제부터라도 천천히 꾸준히 나아가고 있습니다. 어제보다 내일의 저는 더 나은 사람이
+              될 거라는 생각으로 노력합니다.
+            </div>
+          </div>
+          <div class="question">
+            <strong>기초부터 단단한 개발자</strong>
+            <div class="answer">
+              가장 기초적인 HTML,CSS,JS부터 React, Redux, Next로 기본부터 응용까지 차분하게 실력을 쌓아올리고 있습니다.
+              기초부터 천천히 다지는 걸 중요하게 생각합니다.
             </div>
           </div>
         </div>
-        <div class="question">
-          <strong>차분하고 꾸준한 사람</strong>
-          <div class="answer">
-            많이 늦었다고 생각하지만 이제부터라도 천천히 꾸준히 나아가고 있습니다. 어제보다 내일의 저는 더 나은 사람이
-            될 거라는 생각으로 노력합니다.
+        <div id="box3" class="box">
+          <div class="skill">
+            <div class="item">
+              <img src="img/html.png" alt="html" />
+              <div>기본 태그와 속성들에 대한 이해</div>
+            </div>
+            <div class="item">
+              <img src="img/css.png" alt="css" />
+              <div>기본적인 레이아웃 구성과 가상 클래스 등의 이해</div>
+            </div>
+            <div class="item">
+              <img src="img/scss.png" alt="scss" />
+              <div>들여쓰기 외의 함수와 변수 반복문 등 사용 가능</div>
+            </div>
+            <div class="item">
+              <img src="img/tailwindcss.jpg" alt="tailwindcss" />
+              <div>react에 적용해본 경험</div>
+            </div>
+            <div class="item">
+              <img src="img/js.png" alt="javascript" />
+              <div>기본 문법과 es6 이상의 화살표 함수, 클래스 등</div>
+            </div>
+            <div class="item">
+              <img src="img/react.jpg" alt="react" />
+              <div>useState, useEffect 등의 기초적인 hook 사용법</div>
+            </div>
+            <div class="item">
+              <img src="img/nodejs.png" alt="nodeJS" />
+              <div>express를 이용한 localhost와 약간의 ejs 경험</div>
+            </div>
+            <div class="item">
+              <img src="img/git.png" alt="git" />
+              <div>git의 add, commit, push, pull 등 기본적인 사용법</div>
+            </div>
+            <div class="item">
+              <img src="img/pwa.png" alt="pwa" />
+              <div>menifest와 sw.js를 사용하여 pwa 기초 기능 구축</div>
+            </div>
+            <div class="item">
+              <img src="img/figma.jpg" alt="figma" />
+              <div>간단한 와이어프레임과 프로토타입 제작 가능</div>
+            </div>
           </div>
         </div>
-        <div class="question">
-          <strong>기초부터 단단한 개발자</strong>
-          <div class="answer">
-            가장 기초적인 HTML,CSS,JS부터 React, Redux, Next로 기본부터 응용까지 차분하게 실력을 쌓아올리고 있습니다.
-            기초부터 천천히 다지는 걸 중요하게 생각합니다.
+        <div id="box4" class="box">
+          <div id="beforeBtn" class="slideBtn">◀</div>
+          <div class="workWrapper">
+            <div class="workBelt">
+              <article class="work">
+                <div class="screenshot">
+                  <!-- css-background로 img 삽입 -->
+                </div>
+                <div class="contents">
+                  <div class="title">이름 : <span>빙그레 사이트</span></div>
+                  <div class="skill">스택 : <span>Html, CSS, SCSS</span></div>
+                  <div class="desc">
+                    주제 : <span>실제 빙그레 반응형 사이트의 메인 페이지를 새로 만들었습니다.</span>
+                  </div>
+                  <div class="func">기능 : Mobile/Tablet/PC 반응형 웹, 사이드바</div>
+                  <div class="link">
+                    링크 : <a target="_blank" href="https://swcheol.github.io/Binggrae/">빙그레 사이트</a>
+                  </div>
+                  <div class="git">
+                    깃허브 : <a target="_blank" href="https://github.com/SWCheol/Binggrae">깃허브 사이트</a>
+                  </div>
+                </div>
+              </article>
+              <article class="work">
+                <div class="screenshot">
+                  <!-- css-background로 img 삽입 -->
+                </div>
+                <div class="contents">
+                  <div class="title">이름 : <span>교촌치킨 사이트</span></div>
+                  <div class="skill">스택 : <span>React, React-router, tailwind</span></div>
+                  <div class="desc">주제 : <span>이전 교촌치킨 모바일 앱을 PWA로 제작했습니다.</span></div>
+                  <div class="func">기능 : 모바일 웹, 사이드바, 기타 메뉴와 카카오 지도 api 연동</div>
+                  <div class="link">
+                    링크 : <a target="_blank" href="https://kyochonpwa.netlify.app/">교촌치킨 사이트</a>
+                  </div>
+                  <div class="git">
+                    깃허브 : <a target="_blank" href="https://github.com/SWCheol/kyochon">깃허브 사이트</a>
+                  </div>
+                </div>
+              </article>
+              <article class="work">
+                <div class="screenshot">
+                  <!-- css-background로 img 삽입 -->
+                </div>
+                <div class="contents">
+                  <div class="title">이름 : <span>포트폴리오 사이트</span></div>
+                  <div class="skill">스택 : <span>HTML, CSS, SCSS, Javascript</span></div>
+                  <div class="desc">주제 : <span>현재 포트폴리오 사이트를 반응형으로 제작했습니다.</span></div>
+                  <div class="func">기능 : 오른쪽 위의 네비게이션, 원 스크롤 페이지, 가로 캐러셀</div>
+                  <div class="link">
+                    링크 : <a target="_blank" href="https://swcheol.github.io/portfolio/">포트폴리오 사이트</a>
+                  </div>
+                  <div class="git">
+                    깃허브 : <a target="_blank" href="https://github.com/SWCheol/portfolio">깃허브 사이트</a>
+                  </div>
+                </div>
+              </article>
+              <article class="work">
+                <div class="screenshot">
+                  <!-- css-background로 img 삽입 -->
+                </div>
+                <div class="contents">
+                  <div class="title">이름 : <span>H&M 사이트</span></div>
+                  <div class="skill">스택 : <span>React, SCSS, React-router, React-bootstrap</span></div>
+                  <div class="desc">주제 : <span>실제 H&M 사이트를 반응형으로 새로 제작했습니다.</span></div>
+                  <div class="func">기능 : 반응형 웹, 로그인 페이지, 사이즈 선택 등 물건 상세 페이지</div>
+                  <div class="link">링크 : <a target="_blank" href="https://achandm.netlify.app/">H&M 사이트</a></div>
+                  <div class="git">
+                    깃허브 : <a target="_blank" href="https://github.com/SWCheol/HandM">깃허브 사이트</a>
+                  </div>
+                </div>
+              </article>
+              <article class="work">
+                <div class="screenshot">
+                  <!-- css-background로 img 삽입 -->
+                </div>
+                <div class="contents">
+                  <div class="title">이름 : <span>Phone Book 사이트</span></div>
+                  <div class="skill">스택 : <span>React, Redux</span></div>
+                  <div class="desc">주제 : <span>전화번호부 사이트를 React와 Redux로 제작했습니다.</span></div>
+                  <div class="func">기능 : 이름과 전화번호로 리스트 추가 가능, 이름으로 리스트에서 검색 가능</div>
+                  <div class="link">
+                    링크 : <a target="_blank" href="https://phonebookman.netlify.app/">Phone Book 사이트</a>
+                  </div>
+                  <div class="git">
+                    깃허브 : <a target="_blank" href="https://github.com/SWCheol/phoneBook">깃허브 사이트</a>
+                  </div>
+                </div>
+              </article>
+              <article class="work">
+                <div class="screenshot">
+                  <!-- css-background로 img 삽입 -->
+                </div>
+                <div class="contents">
+                  <div class="title">이름 : <span>TodoApp 사이트</span></div>
+                  <div class="skill">스택 : <span>React</span></div>
+                  <div class="desc">주제 : <span>Todo List를 React로 제작했습니다.</span></div>
+                  <div class="func">
+                    기능 : 할 일 추가, 체크, 삭제 가능, 완료된 것만 필터링 가능, 다크모드 일반모드 변환 가능
+                  </div>
+                  <div class="link">
+                    링크 : <a target="_blank" href="https://todoexp.netlify.app/">TodoApp 사이트</a>
+                  </div>
+                  <div class="git">
+                    깃허브 : <a target="_blank" href="https://github.com/SWCheol/todo">깃허브 사이트</a>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
+          <div id="afterBtn" class="slideBtn">▶</div>
         </div>
       </div>
-      <div id="box3" class="box">
-        <div class="skill">
-          <div class="item">
-            <img src="img/html.png" alt="html" />
-            <div>기본 태그와 속성들에 대한 이해</div>
-          </div>
-          <div class="item">
-            <img src="img/css.png" alt="css" />
-            <div>기본적인 레이아웃 구성과 가상 클래스 등의 이해</div>
-          </div>
-          <div class="item">
-            <img src="img/scss.png" alt="scss" />
-            <div>들여쓰기 외의 함수와 변수 반복문 등 사용 가능</div>
-          </div>
-          <div class="item">
-            <img src="img/tailwindcss.jpg" alt="tailwindcss" />
-            <div>react에 적용해본 경험</div>
-          </div>
-          <div class="item">
-            <img src="img/js.png" alt="javascript" />
-            <div>기본 문법과 es6 이상의 화살표 함수, 클래스 등</div>
-          </div>
-          <div class="item">
-            <img src="img/react.jpg" alt="react" />
-            <div>useState, useEffect 등의 기초적인 hook 사용법</div>
-          </div>
-          <div class="item">
-            <img src="img/nodejs.png" alt="nodeJS" />
-            <div>express를 이용한 localhost와 약간의 ejs 경험</div>
-          </div>
-          <div class="item">
-            <img src="img/git.png" alt="git" />
-            <div>git의 add, commit, push, pull 등 기본적인 사용법</div>
-          </div>
-          <div class="item">
-            <img src="img/pwa.png" alt="pwa" />
-            <div>menifest와 sw.js를 사용하여 pwa 기초 기능 구축</div>
-          </div>
-          <div class="item">
-            <img src="img/figma.jpg" alt="figma" />
-            <div>간단한 와이어프레임과 프로토타입 제작 가능</div>
-          </div>
-        </div>
-      </div>
-      <div id="box4" class="box">
-        <div id="beforeBtn" class="slideBtn">◀</div>
-        <div class="workWrapper">
-          <div class="workBelt">
-            <article class="work">
-              <div class="screenshot">
-                <!-- css-background로 img 삽입 -->
-              </div>
-              <div class="contents">
-                <div class="title">이름 : <span>빙그레 사이트</span></div>
-                <div class="skill">스택 : <span>Html, CSS, SCSS</span></div>
-                <div class="desc">주제 : <span>실제 빙그레 반응형 사이트의 메인 페이지를 새로 만들었습니다.</span></div>
-                <div class="func">기능 : Mobile/Tablet/PC 반응형 웹, 사이드바</div>
-                <div class="link">
-                  링크 : <a target="_blank" href="https://swcheol.github.io/Binggrae/">빙그레 사이트</a>
-                </div>
-                <div class="git">
-                  깃허브 : <a target="_blank" href="https://github.com/SWCheol/Binggrae">깃허브 사이트</a>
-                </div>
-              </div>
-            </article>
-            <article class="work">
-              <div class="screenshot">
-                <!-- css-background로 img 삽입 -->
-              </div>
-              <div class="contents">
-                <div class="title">이름 : <span>교촌치킨 사이트</span></div>
-                <div class="skill">스택 : <span>React, React-router, tailwind</span></div>
-                <div class="desc">주제 : <span>이전 교촌치킨 모바일 앱을 PWA로 제작했습니다.</span></div>
-                <div class="func">기능 : 모바일 웹, 사이드바, 기타 메뉴와 카카오 지도 api 연동</div>
-                <div class="link">
-                  링크 : <a target="_blank" href="https://kyochonpwa.netlify.app/">교촌치킨 사이트</a>
-                </div>
-                <div class="git">
-                  깃허브 : <a target="_blank" href="https://github.com/SWCheol/kyochon">깃허브 사이트</a>
-                </div>
-              </div>
-            </article>
-            <article class="work">
-              <div class="screenshot">
-                <!-- css-background로 img 삽입 -->
-              </div>
-              <div class="contents">
-                <div class="title">이름 : <span>포트폴리오 사이트</span></div>
-                <div class="skill">스택 : <span>HTML, CSS, SCSS, Javascript</span></div>
-                <div class="desc">주제 : <span>현재 포트폴리오 사이트를 반응형으로 제작했습니다.</span></div>
-                <div class="func">기능 : 오른쪽 위의 네비게이션, 원 스크롤 페이지, 가로 캐러셀</div>
-                <div class="link">
-                  링크 : <a target="_blank" href="https://swcheol.github.io/portfolio/">포트폴리오 사이트</a>
-                </div>
-                <div class="git">
-                  깃허브 : <a target="_blank" href="https://github.com/SWCheol/portfolio">깃허브 사이트</a>
-                </div>
-              </div>
-            </article>
-            <article class="work">
-              <div class="screenshot">
-                <!-- css-background로 img 삽입 -->
-              </div>
-              <div class="contents">
-                <div class="title">이름 : <span>H&M 사이트</span></div>
-                <div class="skill">스택 : <span>React, SCSS, React-router, React-bootstrap</span></div>
-                <div class="desc">주제 : <span>실제 H&M 사이트를 반응형으로 새로 제작했습니다.</span></div>
-                <div class="func">기능 : 반응형 웹, 로그인 페이지, 사이즈 선택 등 물건 상세 페이지</div>
-                <div class="link">링크 : <a target="_blank" href="https://achandm.netlify.app/">H&M 사이트</a></div>
-                <div class="git">
-                  깃허브 : <a target="_blank" href="https://github.com/SWCheol/HandM">깃허브 사이트</a>
-                </div>
-              </div>
-            </article>
-            <article class="work">
-              <div class="screenshot">
-                <!-- css-background로 img 삽입 -->
-              </div>
-              <div class="contents">
-                <div class="title">이름 : <span>Phone Book 사이트</span></div>
-                <div class="skill">스택 : <span>React, Redux</span></div>
-                <div class="desc">주제 : <span>전화번호부 사이트를 React와 Redux로 제작했습니다.</span></div>
-                <div class="func">기능 : 이름과 전화번호로 리스트 추가 가능, 이름으로 리스트에서 검색 가능</div>
-                <div class="link">
-                  링크 : <a target="_blank" href="https://phonebookman.netlify.app/">Phone Book 사이트</a>
-                </div>
-                <div class="git">
-                  깃허브 : <a target="_blank" href="https://github.com/SWCheol/phoneBook">깃허브 사이트</a>
-                </div>
-              </div>
-            </article>
-            <article class="work">
-              <div class="screenshot">
-                <!-- css-background로 img 삽입 -->
-              </div>
-              <div class="contents">
-                <div class="title">이름 : <span>TodoApp 사이트</span></div>
-                <div class="skill">스택 : <span>React</span></div>
-                <div class="desc">주제 : <span>Todo List를 React로 제작했습니다.</span></div>
-                <div class="func">
-                  기능 : 할 일 추가, 체크, 삭제 가능, 완료된 것만 필터링 가능, 다크모드 일반모드 변환 가능
-                </div>
-                <div class="link">링크 : <a target="_blank" href="https://todoexp.netlify.app/">TodoApp 사이트</a></div>
-                <div class="git">
-                  깃허브 : <a target="_blank" href="https://github.com/SWCheol/todo">깃허브 사이트</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div id="afterBtn" class="slideBtn">▶</div>
+      <div class="night">
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
       </div>
     </main>
 
@@ -269,7 +271,7 @@
     </footer>
 
     <!-- js -->
-    <script src="index.js"></script>
+    <script src="carousel.js"></script>
     <script src="slide.js"></script>
   </body>
 </html>
