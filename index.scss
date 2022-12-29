@@ -8,7 +8,9 @@ html {
 }
 
 body {
-  font-family: "Noto Sans KR", cursive;
+  // font-family: "Noto Sans KR", cursive;
+  font-family: "Dongle", sans-serif;
+  font-family: "Yeon Sung", cursive;
 }
 
 .brush {
@@ -19,15 +21,15 @@ body {
   display: flex;
   align-items: center;
   width: 100vw;
-  height: 150px;
+  height: 100px;
   background: linear-gradient(#000, #071f4b 100%);
-  color: #fff;
   position: absolute;
   top: 0;
   overflow: hidden;
 }
 
 #header .h1 {
+  color: #fff;
   font-size: 3rem;
   position: absolute;
   left: 5%;
@@ -106,9 +108,9 @@ body {
 
 #main {
   width: 100vw;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 200px);
   overflow: hidden;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 #boxWrapper {
@@ -126,7 +128,7 @@ body {
 .box {
   width: 80%;
   height: 90%;
-  margin: calc((100vh - 300px) * 0.05) auto calc((100vh - 300px) * 0.1);
+  margin: calc((100vh - 200px) * 0.05) auto calc((100vh - 200px) * 0.1);
   color: #000;
   background-color: #fff;
   border-radius: 20px;
@@ -154,46 +156,27 @@ body {
   left: 50%;
   transform: translateX(-50%);
   line-height: 1.1;
-  word-break: keep-all;
+  white-space: nowrap;
 }
 
 #box1 > .text br {
   display: none;
 }
 
-/* #box2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  font-size: 1rem;
+#box2 .profile .github a {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-size: contain;
+  color: blue;
+  text-decoration: none;
 }
 
-#box2 .profile {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-basis: 10%;
-  word-break: keep-all;
+#box3 {
 }
 
-#box2 .profile .url a img {
-  width: 8vw;
-  vertical-align: middle;
-}
-
-#box2 .question {
-  flex-basis: 30%;
-  margin-bottom: 15px;
-}
-
-#box2 .question strong {
-  display: block;
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-#box2 .question .answer {
-  line-height: 1.3;
+#box3 img {
+  width: 2rem;
 }
 
 #box3 .skill {
@@ -211,17 +194,6 @@ body {
   width: 50%;
   height: 20%;
 }
-
-#box3 .skill div {
-  font-size: 1.5rem;
-  word-break: keep-all;
-}
-
-#box3 .item img {
-  width: 7vw;
-  flex-basis: 10%;
-  margin-right: 15px;
-} */
 
 #box4 {
   display: flex;
@@ -297,18 +269,15 @@ body {
 
 #box4 .workWrapper .workBelt .work .contents {
   flex-basis: 50%;
-  margin-left: 20px;
+  margin-left: 5%;
 }
 
 #box4 .workWrapper .workBelt .work .contents div {
-  font-size: 1.8rem;
-  line-height: 1.2;
   margin-bottom: 20px;
 }
 
 #box4 .workWrapper .workBelt .work .contents div a {
   color: blue;
-  font-size: 1.6rem;
   text-decoration: none;
 }
 
@@ -316,7 +285,7 @@ body {
   display: flex;
   align-items: center;
   width: 100vw;
-  height: 150px;
+  height: 100px;
   background: linear-gradient(#071f4b 0%, #000 35%);
   color: #fff;
   position: absolute;
@@ -348,24 +317,55 @@ body {
   transition: 1s all;
 }
 
-@media screen and (max-width: 1280px) {
-}
-
 @media screen and (max-width: 1024px) {
   #box4 .workWrapper .workBelt .work {
     flex-direction: column;
   }
 
+  #box4 .workWrapper .workBelt .work .contents {
+    margin-left: 0;
+    margin-top: 5%;
+  }
+
+  #box4 {
+    align-items: flex-start;
+  }
+
+  #box4 .workWrapper {
+    width: 100%;
+    height: 85%;
+  }
+
   #box4 .workWrapper .workBelt .work .screenshot {
-    margin-bottom: 20px;
+    height: 40%;
+  }
+
+  #box4 .workWrapper .workBelt .work .contents {
+    padding-top: 5%;
+    height: 55%;
+    font-size: 1.5rem;
+  }
+
+  #box4 .workWrapper .workBelt .work .contents div {
+    margin-bottom: 10px;
+  }
+
+  #box4 .slideBtn {
+    width: 50%;
+    height: 15%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  #box4 #beforeBtn {
+    left: 0;
+  }
+  #box4 #afterBtn {
+    right: 0;
   }
 }
 
 @media screen and (max-width: 768px) {
-  #header {
-    height: 100px;
-  }
-
   #header .h1 {
     font-size: 2.5rem;
     top: 10%;
@@ -386,6 +386,7 @@ body {
   .box {
     width: 90%;
     margin: calc((100vh - 150px) * 0.05) auto calc((100vh - 150px) * 0.1);
+    padding: 5%;
   }
 
   .box:last-child {
@@ -402,6 +403,11 @@ body {
     display: block;
   }
 
+  #box2 .profile .github a {
+    font-size: 0;
+    background-image: url(img/github.png);
+  }
+
   #footer {
     height: 50px;
   }
@@ -412,5 +418,11 @@ body {
 
   #footer .man {
     display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #box4 .workWrapper .workBelt .work .contents {
+    font-size: 1rem;
   }
 }
