@@ -140,9 +140,9 @@ body {
   overflow: hidden;
 }
 
-.box:last-child {
-  margin: calc((100vh - 300px) * 0.05) auto;
-}
+// .box:last-child {
+//   margin: calc((100vh - 300px) * 0.05) auto;
+// }
 
 #box1 {
   background-color: transparent;
@@ -163,36 +163,44 @@ body {
   display: none;
 }
 
+#box2 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#box2 .profile .name {
+  margin-bottom: 5px;
+}
+
 #box2 .profile .github a {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  background-size: contain;
   color: blue;
   text-decoration: none;
 }
 
-#box3 {
+#box2 .question {
+  line-height: 1.3;
 }
 
-#box3 img {
-  width: 2rem;
+#box2 .question strong {
+  font-size: 2.5rem;
 }
 
-#box3 .skill {
-  height: 100%;
+#box2 .question .answer {
+  margin-top: 15px;
+}
+
+#box3 .item {
+  height: 10%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-#box3 .skill .item {
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
-  width: 50%;
-  height: 20%;
+}
+
+#box3 .item .itemImg {
+  width: 2rem;
+  vertical-align: middle;
+  margin-right: 15px;
 }
 
 #box4 {
@@ -365,7 +373,7 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   #header .h1 {
     font-size: 2.5rem;
     top: 10%;
@@ -389,9 +397,9 @@ body {
     padding: 5%;
   }
 
-  .box:last-child {
-    margin: calc((100vh - 150px) * 0.05) auto;
-  }
+  // .box:last-child {
+  //   margin: calc((100vh - 150px) * 0.05) auto;
+  // }
 
   #box1 > .text {
     font-size: 2.5rem;
@@ -403,9 +411,16 @@ body {
     display: block;
   }
 
-  #box2 .profile .github a {
-    font-size: 0;
-    background-image: url(img/github.png);
+  #box2 .question strong {
+    font-size: 1.6rem;
+  }
+
+  #box2 {
+    font-size: 1.2rem;
+  }
+
+  #box3 .item .itemDesc {
+    font-size: 1rem;
   }
 
   #footer {
